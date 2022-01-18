@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="graphclass.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <title>
+            ClassRoom Monitor
+        </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1><center>Classroom Monitoring Data Logs</center></h1>
+        <div class = "logo">
+            <!--<img src = "logo.jpg" class = "logodut">
+            <img src = "logokhoa.png" class = "logokhoa">!-->
+        </div>
+        <div class="container">
+            <div class = "element">
+                <br>
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1572332/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1572332/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                <br>
+                <br>
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1572332/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>    
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1572332/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                <br>
+            </div>
+        </div>
+        <div class = "Rectangle"></div>
+        <div class = "Nametag">
+            <h2> KhanhHuy+VanThin+DucMinh </h2>
+        </div>
+        <div class = "Circle">
+            <h2>
+                18ES
+            </h2>
+        </div>
+        <div class = "buttonrefresh">
+            <button onClick="window.location.reload();" class = "refresh">Refresh</button>
+        </div>
+        <!--<div class = "buttonclear">
+            <button onClick="window.location.reload();" class = "clear">Clear Data</button>
+        </div>!-->
+        
+        <i class="material-icons" id ="light">light_mode</i>
+        <i class="material-icons" id ="air">air</i>
+        <i class="material-icons" id ="thermostat">thermostat</i>
+        <i class="material-icons" id ="co2">co2</i>
+    </body>
+</html>

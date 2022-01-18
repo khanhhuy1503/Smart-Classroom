@@ -1,0 +1,126 @@
+body{
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(138, 128, 128));
+}
+.h1{
+    font-family: Pathway Gothic One;
+    font-style: normal;
+    font-style: 1000px;
+    line-height: 83px;
+    line-height: 100%;
+    align-items: center;
+    vertical-align: top;
+    fill: #000000;
+    margin: auto;
+    align-content: center;
+}
+.container{
+    position:relative;
+}
+.element{
+    position:absolute;
+    top: 25px; bottom: 0; left: 300px; right: 0;
+    margin: auto;
+    height: 20px;
+}
+iframe{
+    border-radius: 10%;
+}
+.Rectangle{
+    position: absolute;
+    width: 1530px;
+    height: 50px;
+    top: 700px;
+    background:rgb(126, 122, 122);
+    border-radius: 50px;
+    align-content: center;
+    align-self: center;
+}
+.Nametag{
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    top: 680px;
+    right : 20px;
+    background:rgb(255, 255, 255);
+    border-radius: 50px;
+    align-content: center;
+    align-self: center;
+}
+.Nametag h2{
+    position: absolute;
+    font-size: 18px;
+    right: 10px;
+    left: 25px;
+}
+.Circle{
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    top: 650px;
+    position: absolute;
+    left: 50px;
+    background: rgb(255, 255, 255) ;
+}
+.Circle h2{
+    position: absolute;
+    top: 15px;
+    left: 18px;
+}
+.logodut{
+    position: absolute;
+    left: 5px; top:20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+.logokhoa{
+    position: absolute;
+    right: 20px; top:20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+.refresh{
+    position: absolute;
+    border-radius: 20px;
+    left: 680px;
+    top: 65px;
+    width: 150px;
+    height: 30px;
+}
+.clear{
+    position: absolute;
+    border-radius: 20px;
+    left: 750px;
+    top: 65px;
+    width: 150px;
+    height: 30px;
+}
+#light{
+    position: absolute;
+    top: 450px;
+    left: 100px;
+    font-size: 150px;
+    color: rgb(255, 238, 0);
+}
+#air{
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    font-size: 150px;
+    color: rgb(31, 123, 177);
+}
+#thermostat{
+    position: absolute;
+    top: 450px;
+    right: 100px;
+    font-size: 150px;
+    color: rgb(223, 35, 35);
+}
+#co2{
+    position: absolute;
+    top: 150px;
+    right: 100px;
+    font-size: 150px;
+    color: rgb(20, 19, 19);
+}

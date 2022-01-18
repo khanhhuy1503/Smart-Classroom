@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Transitional//EN" "http://www.w3.org/tr/xhtml1/Dtd/xhtml1-Transitional.dtd">
+<html> 
+<head>
+<title>WiFi Login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+<style type="text/css">
+body #login{
+	background: #fff;
+    font-size: 12px;
+    line-height: 16px;
+}
+#login_wrapper {
+	background: #E6E6E6;
+	border-radius: 8px 8px 8px 8px;
+	box-shadow: #666 0px 3px 4px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px 20px;
+    width: 600px;
+}
+#login_header {
+    height: 80px;
+    position: relative;
+}
+#login_header #header_right{
+    float:right;
+}
+#login_header #dev_name {
+    color: #909090;
+    float: left;
+    font-size: 24px;
+    line-height: 24px;
+    margin: 20px;
+}
+#login_content {
+    margin: 0;
+    width: 600px;
+    text-align: center;
+}
+#login_content .cfgstep {
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin-bottom: 0px;
+    margin-left: 0;
+    padding: 12px 0;
+}
+#login_content table {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-collapse: collapse;
+    color: #000000;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 20px auto 0;
+    text-align: center;
+    width: 500px;
+}
+#login_content table td {
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin: 0;
+    padding: 7px 10px;
+    text-align: left;
+    vertical-align: top;
+}
+#login_err {
+	color: #F00;
+    font-size: 13px;
+    line-height: 26px;
+}
+#login_footer {
+    color: #000000;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0;
+    text-align: center;
+}
+body{
+	background: repeat-x #FFF;
+	font: 12px/16px Arial, Helvetica, sans-serif;
+}
+strong{
+	font-weight: bold;
+}
+#wrapper{
+	margin: 0 auto;
+	width: 960px;
+}
+#header{
+	width: 880px;
+	height: 112px;
+    margin: 0 40px;
+    position: relative;
+}
+#logo{
+    float: left;
+    height: 75px;
+    margin: 35px 40px 0 44px;
+    overflow: hidden;
+    position: relative;
+    width: 125px;
+    display: inline;
+}
+#header_right {
+	float: right;
+}
+#cfgarea {
+	background: #E6E6E6;
+	border-radius: 8px 8px 8px 8px;
+	box-shadow: #666 0px 3px 4px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	padding: 15px 18px;
+}
+
+#cfgareadark {
+	background: #5995DB;
+	border-radius: 8px 8px 8px 8px;
+	box-shadow: #666 0px 3px 4px;
+	margin-left: 0px;
+	margin-bottom: 20px;
+	padding: 15px 20px;
+
+}
+.cfgstep {
+	background: #fff;
+	margin-left: 0px;
+	margin-bottom: 10px;
+	padding:12px 0;
+	border-radius: 8px 8px 8px 8px;
+}
+#footer{
+	clear: left;
+	color: #000;
+	font: 12px/11px Arial, Helvetica, sans-serif;
+	padding: 20px 0 30px;
+	text-align: center;
+}
+a {text-decoration: none;color:#FFFFFF;}
+          .bt_write {height:30px; width:70px; margin:10px 0;background-color:#006eff;border-radius:5px;}
+          .bt_restart {height:30px; width:70px; margin:10px 0;background-color:#FF6600;border-radius:5px;}
+          .bt_clear {height:30px; width:70px; margin:10px 0;background-color:#00FF00;border-radius:5px;}
+</style>
+
+</head>
+
+<body id="login">
+	<div style="height: 100px">
+	</div>
+	<div id="login_wrapper">
+		<div id="login_header">
+	  		<div id="header_right">
+	  			<h2 id="dev_name">WiFi Configuration</h2>
+	  		</div>
+		</div>
+		<div id="login_content">
+		    <form id="XForm" name="XForm" method="post">
+			<input id="XRanID" name="XRanID" type="hidden" value="" />
+			<input id="XNonce" name="XNonce" type="hidden" value="" />
+			<input type="hidden" id="XWebPageName" name="XWebPageName" value="index" />
+        		<div id="cfgareadark">
+	           		<div class="cfgstep">
+	             		<table>
+							<tr>
+								<td id="XS0" width="200">Username</td>
+								<td><input type="text" id="ssid" value="" style="width:150px" /></td>
+							</tr>
+							<tr>
+								<td id="XS1" width="200">Password</td>
+								<td><input type="password" id="pass" autocomplete="off" style="width:150px" /></td>
+							</tr>
+              <tr>
+								<td id="XS2" width="200">Sampling Time (mins)</td>
+								<td><input type="text" id="sample" value="" style="width:150px" /></td>
+							</tr>
+						</table>
+						<div id="login_err" style="height: 20px"></div>
+                        <button class="bt_write" onclick="writeEEPROM()">Enter</button>
+                        <button class="bt_restart" onclick="restartESP()">Log Out</button>
+                        <button class="bt_clear" onclick="clearEEPROM()">Reset</button>
+                        <div id>IP connected: <pan id="ipconnected"></pan></div>
+                        <div id="reponsetext"></div>
+					</div>
+				</div>
+		    </form>
+		</div>
+		<div id="login_footer" name="login_footer">Copyright ©  2021, All Rights Reserved.</div>
+	</div>
+    <script>
+        //-----------Tạo đối tượng request----------------
+        function create_obj(){
+          td = navigator.appName;
+          if(td == "Microsoft Internet Explorer"){
+            obj = new ActiveXObject("Microsoft.XMLHTTP");
+          }else{
+            obj = new XMLHttpRequest();
+          }
+          return obj;
+        }
+        var xhttp = create_obj();
+        //------------------------------------------------
+        window.onload = function(){
+          xhttp.open("GET","/getIP",true);
+          xhttp.onreadystatechange = process_ip;//nhận reponse 
+          xhttp.send();
+        }
+        //-----------Kiểm tra response IP------------------
+        function process_ip(){
+          if(xhttp.readyState == 4 && xhttp.status == 200){
+            //------Updat data sử dụng javascript----------
+            ketqua = xhttp.responseText; 
+            document.getElementById("ipconnected").innerHTML=ketqua;       
+          }
+        }
+        //-----------Thiết lập dữ liệu và gửi request ssid và password---
+        function writeEEPROM(){
+          var ssid = document.getElementById("ssid").value;
+          var pass = document.getElementById("pass").value;
+          var sample = document.getElementById("sample").value;
+          xhttp.open("GET","/writeEEPROM?ssid="+ssid+"&pass="+pass+"&sample="+sample,true);
+          xhttp.onreadystatechange = process;//nhận reponse 
+          xhttp.send();
+        }
+        function clearEEPROM(){
+          xhttp.open("GET","/clearEEPROM",true);
+          xhttp.onreadystatechange = process;//nhận reponse 
+          xhttp.send();
+        }
+        function restartESP(){
+          xhttp.open("GET","/restartESP",true);
+          xhttp.onreadystatechange = process;//nhận reponse 
+          xhttp.send();
+        }
+        //-----------Kiểm tra response ------------------
+        function process(){
+          if(xhttp.readyState == 4 && xhttp.status == 200){
+            //------Updat data sử dụng javascript----------
+            ketqua = xhttp.responseText; 
+            document.getElementById("reponsetext").innerHTML=ketqua;       
+          }
+        }
+      </script>
+</body>
+</html>
